@@ -1,0 +1,16 @@
+pyinstaller
+pyspeedtest
+axju-jokes
+pyttsx3
+wikipedia
+wolframalpha
+geocoder
+speechrecognition
+urllib3
+datetime
+requests
+playsound
+winshell
+opencv-python
+psutil
+configparser
