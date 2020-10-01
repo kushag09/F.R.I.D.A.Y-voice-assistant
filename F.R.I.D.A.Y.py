@@ -423,7 +423,21 @@ while True:
                 factmain = random.choice(lines)
                 print(factmain)
                 speak(factmain)
+        
+            elif 'timer' in query or 'stopwatch' in query:
 
+                speak("For how many minutes?")
+                waiting_time = takeCommand()
+                waiting_time = waiting_time.replace('minutes', '')
+                waiting_time = waiting_time.replace('minute', '')
+                waiting_time = waiting_time.replace('for', '')
+                waiting_time = float(waiting_time)
+                waiting_time = waiting_time * 60
+                speak(f'I will remind you in {waiting_time} seconds')
+
+                time.sleep(waiting_time)
+                speak('Your time has been finished sir')
+        
         elif 'laugh' in query:
             beforejoke = ["Prepare to Chuckle. Or Groan", "Here you go", "Alright", "I'll let you decide whether this one is sarcastic:"]
             joke = random.choice(beforejoke)
